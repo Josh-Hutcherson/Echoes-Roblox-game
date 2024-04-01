@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="utf-8">
     <h1 id = "broreallysaid">ECHOES</h1>
-<body>
+    <style>       
+           /* Button Styles */
+        button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        /* Hover Effect */
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        </style>
+    <body>
+     <!-- Video Player -->
+    <video id="myVideo" controls>
+        <source src="your_video_url.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <!-- Video Buttons -->
+    <button class="video-button" onclick="loadVideo('your_video_url.mp4')">Video 1</button>
+    <button class="video-button" onclick="loadVideo('path/to/video2.mp4')">Video 2</button>
+    <!-- Add more buttons as needed -->
+
+    <script>
+        const video = document.getElementById('myVideo');
+
+        // Function to load a new video
+        function loadVideo(videoPath) {
+            video.src = videoPath;
+            video.play();
+        }
+    </script>
+    <br>
     <p>Try our new text-to-speech ability!</p>
     <textarea id="text" rows="4" cols="50">What is this game about?- It’s about going through the dangers of the mind while being trapped in a coma. The game leaves off with a cliffhanger begging the question: did our character wake up or go deeper into the abyss of the mind? Heavily based off of Little Nightmares 2 and Pans Labyrinth.
 Entities
